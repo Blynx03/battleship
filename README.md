@@ -1,50 +1,119 @@
-# React + TypeScript + Vite
+# 🚢 Battleship — A Turn-Based Naval Strategy Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Battleship** is a classic turn-based strategy game reimagined as a modern, browser-based application built with a strong front-end architecture.
 
-Currently, two official plugins are available:
+The game emphasizes **logical deduction, memory, and strategic decision-making**, challenging players to outthink their opponent by systematically locating and destroying enemy ships.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Designed and engineered as a **state-driven React application**, Battleship showcases structured game logic, predictable state transitions, and clean UI separation.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🧠 Game Overview
 
-- Configure the top-level `parserOptions` property like this:
+Battleship is played on a grid-based board where ships of varying lengths are hidden from the opponent.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 🎯 Objective
+Sink **all enemy ships** before your own fleet is destroyed.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Each ship occupies multiple grid cells
+- Ships are sunk only when all segments are hit
+- The first player to eliminate the opposing fleet wins
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🚢 Game Setup
+
+- Players begin by placing ships on their personal grid
+- Ships must:
+  - Stay within grid boundaries
+  - Not overlap other ships
+- Ship orientation can be horizontal or vertical
+- Once setup is complete, the battle begins
+
+---
+
+## 🔄 Turn-Based Gameplay
+
+- Players take turns firing **one shot per turn**
+- A shot is made by selecting a grid coordinate
+- Each action results in:
+  - **Hit** — A ship occupies the cell
+  - **Miss** — Empty water
+  - **Sunk** — Final segment of a ship is destroyed
+- Turns alternate automatically after each valid shot
+
+This structure rewards **pattern recognition and disciplined targeting**.
+
+---
+
+## ✨ Core Gameplay Features
+
+- 🧭 Grid-based targeting system
+- 🚢 Multiple ship types with varying lengths
+- 🎯 Hit, miss, and sunk state tracking
+- 🔄 Strict turn-based flow enforcement
+- 🧠 Logic-driven opponent tracking
+- 🔁 Fully replayable matches
+
+---
+
+## ⚙️ Architecture & State Management
+
+- Centralized game state using **React hooks**
+- Strongly-typed entities for:
+  - Boards
+  - Ships
+  - Cells
+  - Game phases
+- Clean separation between:
+  - Game logic
+  - UI rendering
+  - Player interaction
+- Predictable state transitions for:
+  - Setup
+  - Active play
+  - Game end
+
+The architecture is intentionally built to be **maintainable, readable, and extensible**.
+
+---
+
+## 🛠️ Tech Stack
+
+### Core Technologies
+- **React** — Component-driven UI
+- **TypeScript** — Strong typing for game logic and state
+- **JavaScript (ES6+)** — Core logic utilities
+- **HTML5** — Semantic markup
+- **CSS3** — Layout, transitions, and visual feedback
+
+### Front-End Patterns
+- Functional components
+- Controlled state updates
+- Conditional rendering for game phases
+- Modular UI components
+
+---
+
+## 📸 Game Screenshots
+
+- **Main Page** — Entry point and game introduction  
+![Image](src/assets/images/battleship-mainpage.png)
+
+- **How-To Page** — Rules, mechanics, and strategy overview  
+![Image](src/assets/images/battleship-howto.png)
+
+- **Setup Page** — Ship placement phase  
+![Image](src/assets/images/battleship-setup.png)
+
+- **Board Game Page** — Active gameplay and turn-based combat  
+![Image](src/assets/images/battleship-board.png)
+
+---
+
+## 🎯 Project Goals & Developer Focus
+
+This project was built to:
+
+- Demonstrate **structured front-end game logic**
+- Apply **TypeScript to non-trivial state modeling**

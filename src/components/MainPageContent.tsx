@@ -7,7 +7,7 @@ type handleClickProps = {
 }
 
 const MainPageContent = ({handleClick}:handleClickProps): JSX.Element => {
-    const { mainPageImageContainerRef, mainPageChoicesContainerRef, singlePlayerButtonRef, multiPlayerButtonRef } = useContext(UserContext) as UserContextType;
+    const { mainPageImageContainerRef, mainPageChoicesContainerRef, singlePlayerButtonRef, multiPlayerButtonRef, howToButtonRef } = useContext(UserContext) as UserContextType;
     const MainPageImageContainer = (): JSX.Element => {
         return (
             <div ref={mainPageImageContainerRef} className="main-page-image-container">
@@ -42,6 +42,13 @@ const MainPageContent = ({handleClick}:handleClickProps): JSX.Element => {
                     onClick={() => handleClick("single")}
                 >
                     Single Player
+                </button>
+                <button
+                    ref={howToButtonRef}
+                    className="btn main-how-to-btn"
+                    onClick={() => handleClick('how-to')}
+                >
+                    How To Play
                 </button>
                 <button
                     ref={multiPlayerButtonRef}

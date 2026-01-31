@@ -52,6 +52,7 @@ function App() {
     const mainPageChoicesContainerRef = useRef<HTMLDivElement>(null);
     const singlePlayerButtonRef = useRef<HTMLButtonElement>(null);
     const multiPlayerButtonRef = useRef<HTMLButtonElement>(null);
+    const howToButtonRef = useRef<HTMLButtonElement>(null);
     const mainPageTitleContainerRef = useRef<HTMLDivElement>(null);
     const gamePageTitleContainerRef = useRef<HTMLDivElement>(null);
     const infoContainerRef = useRef<HTMLDivElement>(null);
@@ -102,6 +103,7 @@ function App() {
         mainPageChoicesContainerRef,
         singlePlayerButtonRef,
         multiPlayerButtonRef,
+        howToButtonRef,
         mainPageTitleContainerRef,
         gamePageTitleContainerRef,
         infoContainerRef,

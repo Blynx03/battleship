@@ -1,0 +1,130 @@
+ .battleship-article-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 20;
+    width: 60vw;
+    height: 100%;
+    overflow: scroll;
+    color: lightgray;
+    position: relative;
+ }
+
+.battleship-header-container {
+    position: sticky;
+    top: 0;
+    background: rgba(11, 53, 192, 0.95);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    padding: 1rem;
+    border-radius: 0 0 40px 40px;
+}
+
+.battleship-article-container .battleship-header {
+    font-size: clamp(1.4rem, 5.5vw, 3.8rem);
+    color: dodgerblue;
+    font-weight: 900;
+    text-align: center;
+}
+
+.battleship-header-caption {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.battleship-description-container {
+    margin-left: 10px;
+}
+
+.battleship-description-container p {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    padding: 0;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.battleship-section-container, .battleship-description-container {
+    padding: 2%;
+    width: 100%;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.battleship-section-header {
+    letter-spacing: 2px;
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 2%;
+    border-radius: 10px 10px 0 0;
+}
+
+.battleship-section-description-container {
+    padding: 0% 2% 2% 2%;
+}
+
+.battleship-section-description {
+    padding: 1% 2%;
+    width: 100%;
+}
+
+.battleship-sub-header {
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+}
+
+.battleship-list-header {
+    justify-self: flex-start;
+    font-weight: bold;
+    padding: 1% 3%;
+}
+
+.battleship-list-container {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    width: 100%;
+    padding: 1% 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.battleship-sub-list-container {
+    margin-left: 5%;
+}
+
+hr {
+    border: 5px solid dodgerblue;
+    margin: 4px 0;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+}
+
+em {
+    display:inline;
+}
+
+img {
+    margin: 6px 0 20px;
+}
+
+.how-to-btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    position: fixed;
+    top: 1%;
+    right: 25%;
+    z-index: 30;
+    background-color: dodgerblue;
+    color: tomato;
+    border: 4px solid tomato;
+    cursor: pointer;
+}
+
+.how-to-btn:hover {
+    transform: scale(1.1);
+    color: limegreen;
+}

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import LoadBoard from './LoadBoard'
+import LoadBoard from './loadBoard'
 import GenerateBoardGrid from './GenerateBoardGrid'
 import UserContext, { UserContextType } from '../context/UserContext'
 

@@ -71,6 +71,7 @@ export interface UserContextType {
     mainPageChoicesContainerRef: RefObject<HTMLDivElement>;
     singlePlayerButtonRef: RefObject<HTMLButtonElement>;
     multiPlayerButtonRef: RefObject<HTMLButtonElement>;
+    howToButtonRef: RefObject<HTMLButtonElement>;
     mainPageTitleContainerRef: RefObject<HTMLDivElement>;
     gamePageTitleContainerRef: RefObject<HTMLDivElement>;
     infoContainerRef: RefObject<HTMLDivElement>;
