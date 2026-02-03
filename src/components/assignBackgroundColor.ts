@@ -1,4 +1,4 @@
-import { PlayerProps, SideType } from "../context/UserContext";
+import { SideType } from "../context/UserContext";
 import { getTileElement } from "../utlities/operationUtilities";
 
 type ResultType = {
@@ -13,8 +13,8 @@ const assignBackgroundColor = (
     playerSide: SideType,
     isVertical: boolean,
     tileCount: number,
-    playerTiles: PlayerProps[],
-    opponentTiles: PlayerProps[]
+    // playerTiles: PlayerProps[],
+    // opponentTiles: PlayerProps[]
 ): ResultType => {
     let tiles: number[] = [];
     let bgColor: "red" | "palegreen" = "red";

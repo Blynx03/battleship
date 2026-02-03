@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import UserContext, { UserContextType } from "../context/UserContext";
 import MainPageContent from "./MainPageContent";
 import BoardGame from "./BoardGame";

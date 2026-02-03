@@ -20,44 +20,44 @@ const GenerateBoardGrid = () => {
         playerSide,
         setPlayerSide,
         blockSize,
-        tickedShip,
-        playerTiles,
-        opponentTiles,
+        // tickedShip,
+        // playerTiles,
+        // opponentTiles,
         counter,
         setCounter,
-        color,
+        // color,
         chosenTiles,
         boardgameContainerRef,
         setShowRotateBtn,
         gameOn,
         setGameOn,
-        setAnimatePage,
+        // setAnimatePage,
         infoContainerRef,
         rotateBtnRef,
         topContainerRef,
-        targetImageRef,
+        // targetImageRef,
         bottomContainerRef,
     } = context;
 
     const [showButton, setShowButton] = useState<boolean>(false);
     let tileNum: number = 0;
 
-    function setTile(tile: EventTarget) {
-        const el = document.querySelector(`${tickedShip}`);
-        if (el) {
-            el.remove();
-        }
+    // function setTile(tile: EventTarget) {
+    //     const el = document.querySelector(`${tickedShip}`);
+    //     if (el) {
+    //         el.remove();
+    //     }
 
-        // console.log("settile ", tile)
-        if (tile) {
-            if (playerSide === "player-side") {
-                (tile as HTMLElement).style.background =
-                    "hsla(120, 85%, 85%, 1)";
-            } else {
-                (tile as HTMLElement).style.background = "red";
-            }
-        }
-    }
+    //     // console.log("settile ", tile)
+    //     if (tile) {
+    //         if (playerSide === "player-side") {
+    //             (tile as HTMLElement).style.background =
+    //                 "hsla(120, 85%, 85%, 1)";
+    //         } else {
+    //             (tile as HTMLElement).style.background = "red";
+    //         }
+    //     }
+    // }
 
     // Setting up the board/grid
     const createTiles = (participant: SideType) => {

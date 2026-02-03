@@ -333,9 +333,13 @@
   position: relative;
   width: 200px;
   height: 200px;
-  bottom: -17px;
+  bottom: -38px;
   filter: blur(1px);
   z-index: 10;
+}
+
+.battleship-image {
+  bottom: 10px;
 }
 .main-page-container .main-page-image-container .ocean-image {
   position: relative;

@@ -1,13 +1,13 @@
-import React, { RefObject, SetStateAction, useContext } from "react";
-import UserContext, {
+import React, { SetStateAction } from "react";
+import {
     BlockSizeProps,
     SideType,
     UserContextType,
 } from "../context/UserContext";
 import startGame from "../components/startGame";
 import { getTileNumber, checkTile } from "./operationUtilities";
-import assignBackgroundColor from "../components/assignBackgroundColor";
-import { ConnectionCheckOutFailedEvent } from "mongodb";
+// import assignBackgroundColor from "../components/assignBackgroundColor";
+// import { ConnectionCheckOutFailedEvent } from "mongodb";
 
 export const clickedShip = (
     targetEl: EventTarget,
@@ -106,6 +106,7 @@ export function handleTargetTile(
 ) {
     // e.currentTarget.classList.add("show-crosshair");
     const checkEl = document.querySelector(".inside-tile-image");
+    console.log(playerSide);
 
     if (!checkEl) {
         const imgEl = document.createElement("img");
@@ -125,6 +126,7 @@ export function handleMouseLeave(
     const secondChild = target.lastChild as HTMLImageElement;
     console.log(firstChild);
     console.log(secondChild);
+    console.log(participant);
     if (
         (firstChild && firstChild.alt === "Crosshair") ||
         (secondChild && secondChild.alt === "Crosshair")

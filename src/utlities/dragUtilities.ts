@@ -22,7 +22,7 @@ export function handleDragOver(
 
     const {
         playerSide,
-        tickedShip,
+        // tickedShip,
         isVertical,
         playerTiles,
         opponentTiles,
@@ -40,13 +40,12 @@ export function handleDragOver(
 
     //get associated tiles based on orientation
     if (playerSide) {
+        console.log(playerTiles, opponentTiles);
         const { bgColor, tiles } = assignBackgroundColor(
             tileNum,
             playerSide,
             isVertical,
             tileCount,
-            playerTiles,
-            opponentTiles
         );
 
         tempChosenTiles = tiles.filter((value) => value >= 1 && value <= 100);

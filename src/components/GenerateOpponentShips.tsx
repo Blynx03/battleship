@@ -7,7 +7,7 @@ const GenerateOpponentShips = (): JSX.Element => {
     const {
         blockSize,
         setIsVertical,
-        playerTiles,
+        // playerTiles,
         opponentTiles,
         setOpponentTiles,
         fleetState,
@@ -56,7 +56,7 @@ const GenerateOpponentShips = (): JSX.Element => {
             fleetState.forEach((ship) => {
                 shipImagePath = `../images/${ship.ship}.png`;
                 shipClass = `${ship.ship}-img ship-image`;
-
+                console.log(shipClass);
                 function findValidTile(): {
                     tile: number;
                     isHorizontal: boolean;
@@ -69,9 +69,7 @@ const GenerateOpponentShips = (): JSX.Element => {
                         tile,
                         "opponent-side",
                         isHorizontal,
-                        ship.tile,
-                        playerTiles,
-                        opponentTiles
+                        ship.tile
                     ));
 
                     if (bgColor !== "palegreen") {

@@ -9,7 +9,7 @@ export function getTileSize(
     if (el) {
         setBlockSize({ width: el.offsetWidth, height: el.offsetHeight });
     } else {
-        console.warn("#opponent-side1 not found");
+        console.warn("#opponent-side not found");
     }
 }
 
@@ -34,6 +34,7 @@ export function handleRotate(
 }
 
 export function checkTile(num: number): boolean {
+    console.log(num)
     return true;
 }
 

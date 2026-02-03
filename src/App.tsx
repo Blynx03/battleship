@@ -1,5 +1,5 @@
 import "./styles/app.scss";
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import UserContext, {
     FleetProps,
     PlayerProps,

@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from 'react'
-import UserContext, { UserContextType } from '../context/UserContext';
+import { UserContextType } from '../context/UserContext';
 import { getTileSize } from '../utlities/operationUtilities';
 
 // show game name and boardgame only with players ships on display
@@ -8,7 +7,7 @@ import { getTileSize } from '../utlities/operationUtilities';
 
 
 const startGame = (context: UserContextType) => {
-    const { blockSize, setBlockSize, gameOn, mainPageContainerRef, gamePageTitleContainerRef, infoContainerRef, boardgameContainerRef } = context;
+    const { setBlockSize, mainPageContainerRef } = context;
         
         // change the class of main page container as well, to layout the game name and game board accordingly
         // the goal is to have the gamename to show as big as possible on top of the gameboard
